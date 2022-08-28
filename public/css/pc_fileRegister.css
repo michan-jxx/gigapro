@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/*---Reset---*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+.title{
+    width: 1000px;
+    height: 50px;
+    background-color: mediumblue;
+    border-radius: 5px;
+    margin: 50px auto 20px auto;
+}
+.title h1{
+    color: white;
+    font-size: 30px;
+    margin: auto 20px;
+}
+.form{
+    width: 1000px;
+    height: 400px;
+    margin: 5px auto;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    background-color: white;
+}
+.complain{
+    width: 600px;
+    margin: 20px auto;
+    font-size: 14px;
+}
+.template{
+    width: 220px;
+    margin: 40px auto;
+}
+.warning{
+    color:red;
+    font-size: 13px;
+}
+
+.form button{
+    border: 1px solid blue;
+    border-radius: 5px;
+    color: blue;
+    padding: 2px;
+
+}
+#file{
+    width: 300px;
+}
+.btn{
+    width: 120px;
+}
+form{
+    width: 430px;
+    margin: 20px auto;
+}
+.back{
+    width: 60px;
+    margin: 50px auto;
+}
+.back a{
+    border: 1px solid blue;
+    border-radius: 5px;
+    color: blue;
+}
+.back input{
+    border: 1px solid blue;
+    border-radius: 5px;
+    color: blue;
+}
+

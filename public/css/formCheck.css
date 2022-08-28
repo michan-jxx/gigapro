@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/*---Reset---*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+.form{
+    width: 400px;
+    height: 430px;
+    margin: 50px auto 30px auto;
+    background-color: white;
+    border: solid 1px lightslategray;
+}
+.detail{
+    width: 336px;
+    margin: 30px auto;
+}
+.detail h2{
+    font-size: 13px;
+}
+.edit{
+    width: 270px;
+    height: 300px;
+    margin: 10px auto;
+}
+.validate dl{
+    width: 100%;
+}
+.validate dt{
+    font-weight: bold;
+    margin: 5px;
+    border-bottom: 1px solid lightgrey;
+}
+.validate dd{
+    margin: 5px 0 18px 5px;
+}
+
+.btn_area{
+    width: 270px;
+    margin: 50px auto;
+    display: flex;
+}
+.soushin{
+    width: 50%;
+    text-align: center;
+    margin: 0 40px;
+}
+.modoru{
+    width: 50%;
+    text-align: center;
+    margin: 0 40px;
+}
+.btn_area input{
+    border: 1px solid blue;
+    border-radius: 5px;
+    color:blue;
+}
+.btn_area input:hover{
+    cursor: pointer;
+}

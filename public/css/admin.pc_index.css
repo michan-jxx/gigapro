@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/*---Reset---*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+.head{
+    width: 1000px;
+    background-color: white;
+    border: solid 1px lightslategray;
+    margin: 20px auto 0 auto;
+    display: flex;
+}
+.user h3{
+    font-size: 30px;
+    margin: auto 20px;
+}
+.user p{
+    font-size: 20px;
+    margin: auto 20px;
+}
+.user{
+    display: flex;
+}
+.delete{
+    width: 800px;
+    margin: 20px auto 5px auto;
+}
+.delete button{
+    border: solid blue 1px;
+    border-radius: 5px;
+    color: blue;
+    padding: 3px;
+
+}
+.back{
+    width: 1000px;
+    margin: 20px auto 0 auto;
+}
+.back p{
+    margin-left: 900px;
+}
+.back a{
+    color: blue;
+    font-size: 16px;
+}
+.table{
+    width:1000px;
+    background-color: white;
+    border: solid 1px lightslategray;
+    border-radius: 10px;
+    margin: 0 auto 30px auto;
+}
+.pc_school{
+    margin: 40px auto;
+    width: 800px;
+}
+thead{
+    background-color: lightgrey;
+    height: 30px;
+}
+th{
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+.int{
+    width: 120px;
+}
+.name{
+    width: 200px;
+}
+td{
+    border-bottom: solid 1px lightgrey;
+    text-align: center;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+.button a{
+    border: solid 1px blue;
+    border-radius: 5px;
+    padding: 2px;
+    color: blue;
+}
+.button button{
+    border: solid 1px blue;
+    border-radius: 5px;
+    padding: 0.5px;
+    color: blue;
+}
+.page{
+    margin: 30px auto;
+    width: 160px;
+}

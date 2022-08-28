@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/*---Reset---*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+.head{
+    width: 1000px;
+    height: 50px;
+    background-color: white;
+    border: solid 1px lightslategray;
+    margin: 20px auto 0 auto;
+    display: flex;
+
+}
+.import{
+    display: flex;
+    justify-content: right;
+    margin-left: 650px;
+}
+.import p{
+    border: solid blue 1px;
+    border-radius: 5px;
+    padding: 3px;
+    margin: auto 7px;
+    color: blue;
+    height: 30px;
+}
+.import form{
+    border: solid blue 1px;
+    border-radius: 5px;
+    color: blue;
+    margin: auto 7px;
+    height: 30px;
+}
+.import input:hover{
+    cursor: pointer;
+}
+.table{
+    width:1000px;
+    background-color: white;
+    border: solid 1px lightslategray;
+    border-radius: 10px;
+    margin: 30px auto 30px auto;
+}
+.pc_school{
+    margin: 40px auto;
+    width: 800px;
+}
+thead{
+    background-color: lightgrey;
+    height: 30px;
+}
+th{
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+td{
+    border-bottom: solid 1px lightgrey;
+    text-align: center;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}

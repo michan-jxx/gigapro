@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/*---Reset---*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+.all{
+    background-color: whitesmoke;
+    height: 100vh;
+}
+.title{
+    width:100vw;
+    margin-top: 30vh;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.login{
+    width: 240px;
+    margin: 10vh auto 0 auto;
+}
+.one{
+    text-align: center;
+}
+.one a{
+    color:black;
+}
+.two{
+    text-align: center;
+}
+.two a{
+    color:black;
+}
+.three{
+    text-align: center;
+    margin-top: 20vh;
+}
+.three a{
+    color: dimgrey;
+}

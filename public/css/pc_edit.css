@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/*---Reset---*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+.form{
+    width: 300px;
+    height: 500px;
+    margin: 50px auto 30px auto;
+    background-color: white;
+    border: solid 1px lightslategray;
+}
+.warning{
+    font-size: 13px;
+    color: red;
+}
+.edit{
+    width: 230px;
+    margin: 10px auto;
+}
+.edit select{
+    width: 100%;
+}
+.edit input{
+    width: 100%;
+}
+.pc_id{
+    margin: 20px;
+
+}
+.pc_id h1{
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.button{
+    width: 230px;
+    margin: 20px auto 10px auto;
+    display: flex;
+}
+.button p{
+    width: 50%;
+    text-align: center;
+    color:blue;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin: 0 30px;
+}
+.btn{
+    width: 50%;
+    text-align: center;
+    color:blue;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin: 0 30px;
+}
+
+
+
