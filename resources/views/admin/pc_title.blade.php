@@ -27,7 +27,7 @@
                     <p><a href="{{ route('admin.pc.fileStore') }}">ファイル入力</a></p>
                     <form method="post" action="{{route('admin.pc.export')}}">
                         @csrf
-                        <input type="submit" value="ファイル出力">
+                        <input class="export" type="submit" value="ファイル出力">
                     </form>
                 </div>
             </div>

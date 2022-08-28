@@ -64,6 +64,9 @@ td {
 .import input:hover{
     cursor: pointer;
 }
+.export{
+    margin-top: 2px;
+}
 .table{
     width:1000px;
     background-color: white;

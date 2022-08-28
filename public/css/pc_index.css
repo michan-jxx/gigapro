@@ -69,6 +69,10 @@ td {
     color: blue;
     margin: auto 7px;
     height: 30px;
+    padding: auto;
+}
+.export{
+    margin-top: 2px;
 }
 .import input:hover{
     cursor: pointer;
