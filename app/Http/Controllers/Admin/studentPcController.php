@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 use App\Models\StudentPc;
 use App\Models\School;
+use App\Models\application;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\PcRequest;
+use App\Http\Requests\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\studentPcImport;
 use App\Exports\studentPcExport;
@@ -213,5 +215,105 @@ class studentPcController extends Controller
 
 
     }
+
+    public function allIndex(Request $request){
+
+
+        $school = $request->input('school');
+        $grade = $request->input('grade');
+        $class = $request->input('class');
+        $keyword = $request->input('keyword');
+        $category = $request->input('category');
+        $petition = $request->input('petition');
+        $create = $request->input('create');
+
+        $schools = School::groupby('name')->get('name');
+        $gradese = StudentPc::groupBy('grade')->get('grade');
+        $classes = StudentPc::groupBy('class')->get('class');
+        $categories = application::groupBy('category')->get('category');
+
+        $query = StudentPc::query();
+        // テーブル結合
+        $query->leftjoin('school',function($query)use($request){
+            $query->on('studentPc.school_id','=','school.id');
+        })->leftjoin('application',function($query)use($request){
+            $query->on('studentPc.id','=','application.pc_id');
+        });
+
+
+        if(!empty($school)){
+            $query
+            ->where('school.name','=',"{$school}")
+            ->orderByRaw('grade IS NULL ASC')
+            ->orderBy('grade')
+            ->paginate(30);
+        }
+        if(!empty($grade)){
+            $query
+            ->where('studentPc.grade','=',"{$grade}")
+            ->orderByRaw('grade IS NULL ASC')
+            ->orderBy('grade')
+            ->paginate(30);
+        }
+        if(!empty($class)){
+            $query
+            ->where('studentPc.class','=',"{$class}")
+            ->orderByRaw('grade IS NULL ASC')
+            ->orderBy('grade')
+            ->paginate(30);
+        }
+        if(!empty($keyword)){
+            $query
+            ->Where('studentPc.id', '=', "{$keyword}")
+            ->orWhere('studentPc.name', 'LIKE', "%{$keyword}%")
+            ->orderByRaw('grade IS NULL ASC')
+            ->orderBy('grade')
+            ->paginate(30);
+        }
+        if(!empty($create)){
+            $query
+            ->where('application.created_at','=',"{$create}")
+            ->orderByRaw('grade IS NULL ASC')
+            ->orderBy('grade')
+            ->paginate(30);
+        }
+        if(!empty($category)){
+            $query
+            ->where('application.category','=',"{$category}")
+            ->orderByRaw('grade IS NULL ASC')
+            ->orderBy('grade')
+            ->paginate(30);
+        }
+        if(!empty($petition)){
+            $query
+            ->Where('application.petition', 'LIKE', "%{$petition}%")
+            ->orderByRaw('grade IS NULL ASC')
+            ->orderBy('grade')
+            ->paginate(30);
+        }
+        $items = $query
+        ->select('studentPc.id','studentPc.grade','studentPc.class','studentPc.name',
+        'studentPc.school_id','school.name as school_name','application.category',
+        'application.petition','application.created_at')
+        ->paginate(30);
+
+
+        return view('admin.pc_alldata',[
+            'items' => $items,
+            'schools' =>$schools,
+            'gradese' =>$gradese,
+            'classes' =>$classes,
+            'categories' =>$categories,
+            'school' =>$school,
+            'grade' =>$grade,
+            'class' =>$class,
+            'keyword' =>$keyword,
+            'category' =>$category,
+            'petition' =>$petition,
+            'create' =>$create,
+
+        ]);
+    }
+
 
 }

@@ -150,3 +150,8 @@ Route::post('/export', 'App\Http\Controllers\Admin\studentPcController@export')
 Route::post('/check_delete', 'App\Http\Controllers\Admin\studentPcController@check_delete')
 ->name('check.delete');
 
+// 全データ表示
+Route::get('/pc_alldata', 'App\Http\Controllers\Admin\studentPcController@allIndex')
+->middleware('auth:admins')
+->name('alldata');
+
