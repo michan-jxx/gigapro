@@ -295,6 +295,10 @@ class studentPcController extends Controller
         ->select('studentPc.id','studentPc.grade','studentPc.class','studentPc.name',
         'studentPc.school_id','school.name as school_name','application.category',
         'application.petition','application.created_at')
+        ->orderBy('school_id')
+        ->orderBy('grade')
+        ->orderBy('class')
+        ->orderBy('id')
         ->paginate(30);
 
 
