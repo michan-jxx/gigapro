@@ -14,6 +14,9 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <p><a href="{{ url('admin/reception') }}">申請受付一覧</a></p>
                 </div>
+                <div class="p-6 bg-white border-b border-gray-200">
+                    <p><a href="{{ url('admin/pc_alldata') }}">全データ一覧</a></p>
+                </div>
             </div>
         </div>
     </div>
